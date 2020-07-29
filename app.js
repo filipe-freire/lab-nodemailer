@@ -49,6 +49,7 @@ app.use(
 );
 
 app.use((req, res, next) => {
+  // This passes the user object to every route so we can access the user object without having to pass it everytime inside the routing
   const userId = req.session.user;
   if (userId) {
     User.findById(userId)

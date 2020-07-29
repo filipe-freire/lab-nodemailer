@@ -1,0 +1,8 @@
+{{#if user}}
+    <a href="/">{{ user.name }}'s Profile</a>
+    <h2>Your name:  {{ user.name }} </h2>
+    <h2>User status: {{ user.status }} </h2>
+    {{else}}
+    <a href="/sign-in">Sign In</a>
+    <a href="/sign-up">Sign Up</a>
+{{/if}}
